@@ -3,52 +3,99 @@
   "WorkspaceRootPath": "D:\\wad_project\\crickinfo_mvc_ef_core\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\controllers\\tournamentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:controllers\\tournamentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\models\\tournament.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:models\\tournament.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\views\\tournament\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:views\\tournament\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\models\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:models\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\views\\tournament\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:views\\tournament\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\models\\sql\\sqltournamentrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:models\\sql\\sqltournamentrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\controllers\\matchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:controllers\\matchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\models\\matches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:models\\matches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\models\\teamtournament.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:models\\teamtournament.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\views\\matches\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:views\\matches\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\views\\team\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:views\\team\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\views\\tournament\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:views\\tournament\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\models\\interface\\imatchesrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:models\\interface\\imatchesrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\controllers\\teamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:controllers\\teamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\models\\sql\\sqlteamsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:models\\sql\\sqlteamsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\models\\interface\\iteamsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:models\\interface\\iteamsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_53bc9b9d_9d6a_45d4_8429_2a2761773502/True/SqlTable/dbo.Teams.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\models\\crickinfocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:models\\crickinfocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\models\\sql\\sqlunitofworkrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:models\\sql\\sqlunitofworkrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\migrations\\crickinfocontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:migrations\\crickinfocontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\models\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:models\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\controllers\\tournamentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:controllers\\tournamentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\models\\sql\\sqltournamentrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:models\\sql\\sqltournamentrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\models\\sql\\sqluserrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:models\\sql\\sqluserrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\models\\interface\\iuserrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:models\\interface\\iuserrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\models\\tournament.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:models\\tournament.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\views\\tournament\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:views\\tournament\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\models\\teamtournament.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|solutionrelative:models\\teamtournament.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B58C855-C786-409A-A551-54914D991AC1}|crickinfo_mvc_ef_core.csproj|d:\\wad_project\\crickinfo_mvc_ef_core\\models\\pointstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,32 +133,251 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Views\\Team\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Team\\Create.cshtml",
+              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Views\\Team\\Create.cshtml",
+              "RelativeToolTip": "Views\\Team\\Create.cshtml",
+              "ViewState": "AgIAABgAAADALjMzMzMrwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-23T08:11:05.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MatchesController.cs",
+              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Controllers\\MatchesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MatchesController.cs",
+              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Controllers\\MatchesController.cs",
+              "RelativeToolTip": "Controllers\\MatchesController.cs",
+              "ViewState": "AgIAAIEAAABA/////38kwI0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T07:51:43.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IMatchesRepo.cs",
+              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\Interface\\IMatchesRepo.cs",
+              "RelativeDocumentMoniker": "Models\\Interface\\IMatchesRepo.cs",
+              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\Interface\\IMatchesRepo.cs",
+              "RelativeToolTip": "Models\\Interface\\IMatchesRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T07:49:35.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Views\\Matches\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Matches\\Create.cshtml",
+              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Views\\Matches\\Create.cshtml",
+              "RelativeToolTip": "Views\\Matches\\Create.cshtml",
+              "ViewState": "AgIAACwAAADAMzMzM3MhwDwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-23T07:46:22.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SQLUnitOfWorkRepo.cs",
+              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\SQL\\SQLUnitOfWorkRepo.cs",
+              "RelativeDocumentMoniker": "Models\\SQL\\SQLUnitOfWorkRepo.cs",
+              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\SQL\\SQLUnitOfWorkRepo.cs",
+              "RelativeToolTip": "Models\\SQL\\SQLUnitOfWorkRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T06:29:37.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CrickInfoContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Migrations\\CrickInfoContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Migrations\\CrickInfoContextModelSnapshot.cs",
+              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Migrations\\CrickInfoContextModelSnapshot.cs",
+              "RelativeToolTip": "Migrations\\CrickInfoContextModelSnapshot.cs",
+              "ViewState": "AgIAAIgAAAAAyJmZmZkdwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T06:24:59.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Views\\Tournament\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Tournament\\Create.cshtml",
+              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Views\\Tournament\\Create.cshtml",
+              "RelativeToolTip": "Views\\Tournament\\Create.cshtml",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAAAA8AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-18T10:47:58.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Matches.cs",
+              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\Matches.cs",
+              "RelativeDocumentMoniker": "Models\\Matches.cs",
+              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\Matches.cs",
+              "RelativeToolTip": "Models\\Matches.cs",
+              "ViewState": "AgIAABAAAAAQmZmZmZk8wBcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T07:12:46.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "dbo.Teams.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_53bc9b9d_9d6a_45d4_8429_2a2761773502/True/SqlTable/dbo.Teams.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_53bc9b9d_9d6a_45d4_8429_2a2761773502/True/SqlTable/dbo.Teams.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-10-19T07:10:52.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ITeamsRepo.cs",
+              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\Interface\\ITeamsRepo.cs",
+              "RelativeDocumentMoniker": "Models\\Interface\\ITeamsRepo.cs",
+              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\Interface\\ITeamsRepo.cs",
+              "RelativeToolTip": "Models\\Interface\\ITeamsRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T07:11:12.16Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TeamController.cs",
+              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Controllers\\TeamController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TeamController.cs",
+              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Controllers\\TeamController.cs",
+              "RelativeToolTip": "Controllers\\TeamController.cs",
+              "ViewState": "AgIAABkAAABgZmZmZqYowA0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T05:41:43.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SQLTeamsRepo.cs",
+              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\SQL\\SQLTeamsRepo.cs",
+              "RelativeDocumentMoniker": "Models\\SQL\\SQLTeamsRepo.cs",
+              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\SQL\\SQLTeamsRepo.cs",
+              "RelativeToolTip": "Models\\SQL\\SQLTeamsRepo.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAABQPQ4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T07:11:15.273Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IUserRepo.cs",
+              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\Interface\\IUserRepo.cs",
+              "RelativeDocumentMoniker": "Models\\Interface\\IUserRepo.cs",
+              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\Interface\\IUserRepo.cs",
+              "RelativeToolTip": "Models\\Interface\\IUserRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T05:27:35.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SQLUserRepo.cs",
+              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\SQL\\SQLUserRepo.cs",
+              "RelativeDocumentMoniker": "Models\\SQL\\SQLUserRepo.cs",
+              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\SQL\\SQLUserRepo.cs",
+              "RelativeToolTip": "Models\\SQL\\SQLUserRepo.cs",
+              "ViewState": "AgIAABEAAABAMTMzM/MhwAUAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T05:19:10.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CrickInfoContext.cs",
+              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\CrickInfoContext.cs",
+              "RelativeDocumentMoniker": "Models\\CrickInfoContext.cs",
+              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\CrickInfoContext.cs",
+              "RelativeToolTip": "Models\\CrickInfoContext.cs",
+              "ViewState": "AgIAAA0AAABAl5mZmZklwBIAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T07:05:24.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Team.cs",
+              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\Team.cs",
+              "RelativeDocumentMoniker": "Models\\Team.cs",
+              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\Team.cs",
+              "RelativeToolTip": "Models\\Team.cs",
+              "ViewState": "AgIAAAQAAAAALjMzMzMLwAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T07:10:40.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAABMAAAAgyczMzMwwwBkAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T11:33:24.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SQLTournamentRepo.cs",
+              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\SQL\\SQLTournamentRepo.cs",
+              "RelativeDocumentMoniker": "Models\\SQL\\SQLTournamentRepo.cs",
+              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\SQL\\SQLTournamentRepo.cs",
+              "RelativeToolTip": "Models\\SQL\\SQLTournamentRepo.cs",
+              "ViewState": "AgIAABEAAAAAvszMzMwEwBoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T10:58:23.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "TournamentController.cs",
               "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Controllers\\TournamentController.cs",
               "RelativeDocumentMoniker": "Controllers\\TournamentController.cs",
               "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Controllers\\TournamentController.cs",
               "RelativeToolTip": "Controllers\\TournamentController.cs",
-              "ViewState": "AgIAAA0AAAAANjMzM7MRwAgAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAbmZmZmYAwD4AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-18T10:45:40.135Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAABYAAABA/f////8fwB8AAAAjAAAAAAAAAA==",
+              "DocumentIndex": 19,
+              "Title": "Tournament.cs",
+              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\Tournament.cs",
+              "RelativeDocumentMoniker": "Models\\Tournament.cs",
+              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\Tournament.cs",
+              "RelativeToolTip": "Models\\Tournament.cs",
+              "ViewState": "AgIAAA4AAACAxszMzAwrwBsAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T10:58:26.309Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T07:07:51.838Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 22,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Views\\User\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\User\\Create.cshtml",
@@ -123,79 +389,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CrickInfoContext.cs",
-              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\CrickInfoContext.cs",
-              "RelativeDocumentMoniker": "Models\\CrickInfoContext.cs",
-              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\CrickInfoContext.cs",
-              "RelativeToolTip": "Models\\CrickInfoContext.cs",
-              "ViewState": "AgIAAAgAAACAmZmZmZklwBIAAAAoAAAAAAAAAA==",
+              "DocumentIndex": 20,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAABMAAACAyszMzMwiwB8AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T07:05:24.4Z"
+              "WhenOpened": "2024-10-18T10:58:26.309Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Team.cs",
-              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\Team.cs",
-              "RelativeDocumentMoniker": "Models\\Team.cs",
-              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\Team.cs",
-              "RelativeToolTip": "Models\\Team.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T07:10:40.659Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Tournament.cs",
-              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\Tournament.cs",
-              "RelativeDocumentMoniker": "Models\\Tournament.cs",
-              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\Tournament.cs",
-              "RelativeToolTip": "Models\\Tournament.cs",
-              "ViewState": "AgIAAAMAAAAwHjMzMzMLwBoAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T07:07:51.838Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Views\\Tournament\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Tournament\\Create.cshtml",
-              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Views\\Tournament\\Create.cshtml",
-              "RelativeToolTip": "Views\\Tournament\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-18T10:47:58.966Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T11:33:24.78Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SQLTournamentRepo.cs",
-              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\SQL\\SQLTournamentRepo.cs",
-              "RelativeDocumentMoniker": "Models\\SQL\\SQLTournamentRepo.cs",
-              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\SQL\\SQLTournamentRepo.cs",
-              "RelativeToolTip": "Models\\SQL\\SQLTournamentRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T10:58:23.296Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 21,
               "Title": "Create.cshtml.cs",
               "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Views\\Tournament\\Create.cshtml.cs",
               "RelativeDocumentMoniker": "Views\\Tournament\\Create.cshtml.cs",
@@ -207,19 +413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Matches.cs",
-              "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\Matches.cs",
-              "RelativeDocumentMoniker": "Models\\Matches.cs",
-              "ToolTip": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\Matches.cs",
-              "RelativeToolTip": "Models\\Matches.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T07:12:46.719Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 25,
               "Title": "startup.cs",
               "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\startup.cs",
               "RelativeDocumentMoniker": "startup.cs",
@@ -231,7 +425,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 24,
               "Title": "PointsTable.cs",
               "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\PointsTable.cs",
               "RelativeDocumentMoniker": "Models\\PointsTable.cs",
@@ -243,7 +437,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 23,
               "Title": "TeamTournament.cs",
               "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\TeamTournament.cs",
               "RelativeDocumentMoniker": "Models\\TeamTournament.cs",
@@ -255,7 +449,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 26,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -267,7 +461,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 27,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
@@ -279,7 +473,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 28,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\wad_project\\crickinfo_mvc_ef_core\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",

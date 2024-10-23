@@ -1,4 +1,6 @@
 ﻿using crickinfo_mvc_ef_core.Models.Interface;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
 
 namespace crickinfo_mvc_ef_core.Models.SQL
 {
@@ -6,15 +8,21 @@ namespace crickinfo_mvc_ef_core.Models.SQL
     {
         private CrickInfoContext _context;
         private IUnitOfWork _unitOfWork;
-
-        public SQLTeamsRepo(CrickInfoContext context)
+        //public SQLTeamsRepo(CrickInfoContext context)
+        //{
+        //    _context = context;
+        //}
+        public SQLTeamsRepo(CrickInfoContext context, IUnitOfWork unitOfWork)
         {
-            _context = context;
+            _context = context ?? throw new ArgumentNullException(nameof(context)); // Ensure context is not null
+            _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork)); // Ensure unitOfWork is not null
         }
-
         Team ITeamsRepo.Add(Team team, int tournament_id)
         {
             //add team into TeamTournamet.cs..
+            _context.Teams.Add(team);
+            _context.SaveChanges();
+
             TeamTournament teamTournament = new TeamTournament
             {
                 TeamId = team.TeamId,
@@ -23,10 +31,15 @@ namespace crickinfo_mvc_ef_core.Models.SQL
                 Tournament = _context.Tournaments.Find(tournament_id),
                 DateJoined = DateTime.Now,
             };
-            _unitOfWork.Team.Add(team, tournament_id);
+            
+            // Add the TeamTournament entry using the UnitOfWork method
+            _unitOfWork.AddTeamTournament(teamTournament);
+
+            // Save changes to both Teams and TeamTournaments
+            _unitOfWork.Save();
+            //_unitOfWork.Team.Add(team, tournament_id);
             //_context.TeamTournaments.Add(teamTournament);
-            _context.Teams.Add(team);
-            _context.SaveChanges();
+
             return team;
         }
 
@@ -56,7 +69,17 @@ namespace crickinfo_mvc_ef_core.Models.SQL
 
         IEnumerable<Team> ITeamsRepo.GetAllTeams()
         {
-            return _context.Teams;
+            //return _context.Teams.ToList();
+            return _context.Teams.Include(t => t.TeamTournaments).ToList();
+        }
+
+        IEnumerable<Team> ITeamsRepo.GetTeamsByTournamentId(int tournament_id)
+        {
+            var teams = _context.TeamTournaments
+              .Where(tt => tt.TournamentId == tournament_id)
+              .Select(tt => tt.Team) // Get the associated team
+              .ToList();
+            return teams;
         }
 
 

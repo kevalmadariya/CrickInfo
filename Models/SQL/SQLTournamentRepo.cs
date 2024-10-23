@@ -21,9 +21,9 @@ namespace crickinfo_mvc_ef_core.Models.SQL
         }
 
 
-        public async Task<Tournament> GetTournamentByIdAsync(int id)
+        Tournament ITournamentRepo.GetTournamentById(int id)
         {
-            return await _context.Tournaments.FindAsync(id);
+            return _context.Tournaments.Find(id);
         }
 
         Tournament ITournamentRepo.Update(Tournament tournament)

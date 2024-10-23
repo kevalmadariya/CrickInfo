@@ -12,8 +12,8 @@ using crickinfo_mvc_ef_core.Models;
 namespace crickinfo_mvc_ef_core.Migrations
 {
     [DbContext(typeof(CrickInfoContext))]
-    [Migration("20241019044557_ver3")]
-    partial class ver3
+    [Migration("20241023103730_Ver6")]
+    partial class Ver6
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,46 +27,26 @@ namespace crickinfo_mvc_ef_core.Migrations
 
             modelBuilder.Entity("TeamTournament", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("TeamId")
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<int>("TournamentId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("DateJoined")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("TeamId")
+                    b.Property<int>("Id")
                         .HasColumnType("int");
 
                     b.Property<string>("TeamStatus")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TournamentId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("TeamId");
+                    b.HasKey("TeamId", "TournamentId");
 
                     b.HasIndex("TournamentId");
 
                     b.ToTable("TeamTournaments");
-                });
-
-            modelBuilder.Entity("TeamTournament1", b =>
-                {
-                    b.Property<int>("TeamsTeamId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TournamentsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("TeamsTeamId", "TournamentsId");
-
-                    b.HasIndex("TournamentsId");
-
-                    b.ToTable("TeamTournament1");
                 });
 
             modelBuilder.Entity("crickinfo_mvc_ef_core.Models.Matches", b =>
@@ -152,7 +132,6 @@ namespace crickinfo_mvc_ef_core.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TeamId"));
 
                     b.Property<string>("Logo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -229,13 +208,13 @@ namespace crickinfo_mvc_ef_core.Migrations
             modelBuilder.Entity("TeamTournament", b =>
                 {
                     b.HasOne("crickinfo_mvc_ef_core.Models.Team", "Team")
-                        .WithMany()
+                        .WithMany("TeamTournaments")
                         .HasForeignKey("TeamId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("crickinfo_mvc_ef_core.Models.Tournament", "Tournament")
-                        .WithMany()
+                        .WithMany("TeamTournaments")
                         .HasForeignKey("TournamentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -243,21 +222,6 @@ namespace crickinfo_mvc_ef_core.Migrations
                     b.Navigation("Team");
 
                     b.Navigation("Tournament");
-                });
-
-            modelBuilder.Entity("TeamTournament1", b =>
-                {
-                    b.HasOne("crickinfo_mvc_ef_core.Models.Team", null)
-                        .WithMany()
-                        .HasForeignKey("TeamsTeamId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("crickinfo_mvc_ef_core.Models.Tournament", null)
-                        .WithMany()
-                        .HasForeignKey("TournamentsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("crickinfo_mvc_ef_core.Models.Matches", b =>
@@ -313,6 +277,16 @@ namespace crickinfo_mvc_ef_core.Migrations
                         .HasForeignKey("UserId");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("crickinfo_mvc_ef_core.Models.Team", b =>
+                {
+                    b.Navigation("TeamTournaments");
+                });
+
+            modelBuilder.Entity("crickinfo_mvc_ef_core.Models.Tournament", b =>
+                {
+                    b.Navigation("TeamTournaments");
                 });
 #pragma warning restore 612, 618
         }

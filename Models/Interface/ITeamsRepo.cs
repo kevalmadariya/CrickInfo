@@ -5,7 +5,8 @@
 		Team GetTeamById(int id);
 		Team Add(Team team,int tournament_id);
 		IEnumerable<Team> GetAllTeams();
-		Team Update(Team team);
+		IEnumerable<Team> GetTeamsByTournamentId(int tournament_id);
+        Team Update(Team team);
 		Team Delete(int id);
 
 	}

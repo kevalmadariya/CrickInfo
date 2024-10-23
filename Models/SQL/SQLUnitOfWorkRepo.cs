@@ -1,4 +1,5 @@
 ﻿using crickinfo_mvc_ef_core.Models.Interface;
+using Microsoft.EntityFrameworkCore;
 using System.Runtime.CompilerServices;
 
 namespace crickinfo_mvc_ef_core.Models.SQL
@@ -19,7 +20,7 @@ namespace crickinfo_mvc_ef_core.Models.SQL
         {
             get
             {
-                return _teamsRepo = _teamsRepo ?? new SQLTeamsRepo(_context);
+                return _teamsRepo = _teamsRepo ?? new SQLTeamsRepo(_context,this);
             }
         }
 
@@ -29,7 +30,11 @@ namespace crickinfo_mvc_ef_core.Models.SQL
         //    _context.SaveChanges();
         //    return teamTournament;
         //}
-
+        public void AddTeamTournament(TeamTournament teamTournament)
+        {
+            // Since we don't have a DbSet for TeamTournament, we handle it directly
+            _context.Entry(teamTournament).State = EntityState.Added;
+        }
         public void Save()
         {
             _context.SaveChanges();

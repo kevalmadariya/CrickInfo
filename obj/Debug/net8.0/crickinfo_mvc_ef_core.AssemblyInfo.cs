@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("crickinfo_mvc_ef_core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+541447edf21604b35ad5c40acd22592ef0baec29")]
 [assembly: System.Reflection.AssemblyProductAttribute("crickinfo_mvc_ef_core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("crickinfo_mvc_ef_core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

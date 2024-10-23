@@ -1,3 +1,9 @@
-﻿<h1>@Model.Name</h1>
-<h2>@Model.Email</h1>
-
+﻿@if (Model != null)
+{
+    <h1>@Model.Name</h1>
+    <p>@Model.Email</p>
+}
+else
+{
+    <p>Tournament not found.</p>
+}

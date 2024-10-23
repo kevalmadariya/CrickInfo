@@ -3,7 +3,7 @@
 	public interface IMatchesRepo
 	{
 		Matches GetMatchesById(int id);
-		Matches Add(Matches matches);
+		Matches Add(Matches matches, int tournamentId);
 		IEnumerable<Matches> GetAllMatches();
 		Matches Update(Matches matches);
 		Matches Delete(int id);

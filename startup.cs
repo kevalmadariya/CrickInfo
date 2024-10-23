@@ -39,7 +39,8 @@ namespace ASPCoreEFSimple
 			services.AddScoped<IUserRepo, SQLUserRepo>();
 			services.AddScoped<ITournamentRepo, SQLTournamentRepo>();
             services.AddScoped<ITeamsRepo, SQLTeamsRepo>();
-
+			services.AddScoped<IUnitOfWork, SQLUnitOfWorkRepo>();
+			services.AddScoped<IMatchesRepo, SQLMatchesRepo>();
             services.AddDbContext<CrickInfoContext>(options =>
 					options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             //sessions

@@ -1,7 +1,7 @@
 ﻿//using crickinfo_mvc_ef_core.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Emit;
-using System.Text.RegularExpressions;   
+using System.Text.RegularExpressions;
 
 namespace crickinfo_mvc_ef_core.Models
 {
@@ -18,7 +18,7 @@ namespace crickinfo_mvc_ef_core.Models
         public DbSet<Matches> Matches { get; set; }
         public DbSet<PointsTable> PointsTables { get; set; }
         public DbSet<Team> Teams { get; set; }
-        //public DbSet<TeamTournament> TeamTournaments { get; set; }
+        public DbSet<TeamTournament> TeamTournaments { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<TeamTournament>().HasKey(pt => new { pt.TeamId, pt.TournamentId });
@@ -33,7 +33,7 @@ namespace crickinfo_mvc_ef_core.Models
                 .HasForeignKey(m => m.TeamAId)
                 .OnDelete(DeleteBehavior.Restrict); // change to Restrict or NoAction
 
-            modelBuilder.Entity<Mfatches>()
+            modelBuilder.Entity<Matches>()
                 .HasOne(m => m.TeamB)
                 .WithMany()
                 .HasForeignKey(m => m.TeamBId)
@@ -46,8 +46,5 @@ namespace crickinfo_mvc_ef_core.Models
                 .OnDelete(DeleteBehavior.Cascade);
 
         }
-
-
-
     }
 }

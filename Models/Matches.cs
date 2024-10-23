@@ -1,5 +1,6 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace crickinfo_mvc_ef_core.Models
 {
@@ -20,7 +21,9 @@ namespace crickinfo_mvc_ef_core.Models
 
 		public DateTime MatchDate { get; set; }
 
-		public int TournamentId { get; set; }
+		[NotMapped]
+		public List<Team>? teamslist { get; set; }
+        public int TournamentId { get; set; }
 		public Tournament Tournament { get; set; } = new Tournament(); // Initialize Tournament to a new instance
 	}
 }

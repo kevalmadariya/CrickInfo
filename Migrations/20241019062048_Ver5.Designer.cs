@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using crickinfo_mvc_ef_core.Models;
 
@@ -11,9 +12,11 @@ using crickinfo_mvc_ef_core.Models;
 namespace crickinfo_mvc_ef_core.Migrations
 {
     [DbContext(typeof(CrickInfoContext))]
-    partial class CrickInfoContextModelSnapshot : ModelSnapshot
+    [Migration("20241019062048_Ver5")]
+    partial class Ver5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -43,7 +46,7 @@ namespace crickinfo_mvc_ef_core.Migrations
 
                     b.HasIndex("TournamentId");
 
-                    b.ToTable("TeamTournaments");
+                    b.ToTable("TeamTournament");
                 });
 
             modelBuilder.Entity("crickinfo_mvc_ef_core.Models.Matches", b =>

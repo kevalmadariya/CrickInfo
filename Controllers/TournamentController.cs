@@ -59,7 +59,7 @@ namespace crickinfo_mvc_ef_core.Controllers
 
             model.UserId = 1;
             model.User = new User((int)uId);
-            model.Teams = new List<Team>();
+            model.TeamTournaments = new List<TeamTournament>();
             if (ModelState.IsValid)
             {
                 ViewBag.Message = "Tournament added successfully!";

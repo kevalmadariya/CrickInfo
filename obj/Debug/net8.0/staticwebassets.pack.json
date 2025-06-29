@@ -1,16 +1,24 @@
 {
   "Files": [
     {
-      "Id": "D:\\wad_project\\crickinfo_mvc_ef_core\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\crickinfo_mvc_ef_core.bundle.scp.css",
-      "PackagePath": "staticwebassets\\crickinfo_mvc_ef_core.bundle.scp.css"
+      "Id": "D:\\wad_project\\crickinfo_mvc_ef_core\\wwwroot\\css\\register.css",
+      "PackagePath": "staticwebassets\\css\\register.css"
     },
     {
       "Id": "D:\\wad_project\\crickinfo_mvc_ef_core\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "D:\\wad_project\\crickinfo_mvc_ef_core\\wwwroot\\css\\team.css",
+      "PackagePath": "staticwebassets\\css\\team.css"
+    },
+    {
       "Id": "D:\\wad_project\\crickinfo_mvc_ef_core\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\wad_project\\crickinfo_mvc_ef_core\\wwwroot\\images\\ipl.jpg",
+      "PackagePath": "staticwebassets\\images\\ipl.jpg"
     },
     {
       "Id": "D:\\wad_project\\crickinfo_mvc_ef_core\\wwwroot\\js\\site.js",

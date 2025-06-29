@@ -1,0 +1,76 @@
+﻿@model crickinfo_mvc_ef_core.Models.DTO.MatchContentViewModel
+
+<h3 style="color:black" class="text-xl font-semibold mb-4">@((Model.FormModel.Id == 0) ? "Add Match" : "Edit Match")</h3>
+
+<hr />
+
+<form asp-action="Save" method="post" class="space-y-4">
+    <input type="hidden" asp-for="TournamentId" />
+    <input type="hidden" asp-for="FormModel.Id" />
+
+    <div class="form-group">
+        <label class="form-label font-medium mb-1">Select Teams (Only Two)</label>
+        <div class="team-selection space-y-1">
+            <div style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+                <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                    <thead>
+                        <tr style="background-color: #f2f2f2;">
+                            <th style="padding: 12px; border: 1px solid #ddd; color: black;">Select</th>
+                            <th style="padding: 12px; border: 1px solid #ddd; color: black;">Team Name</th>
+                            <th style="padding: 12px; border: 1px solid #ddd; color: black;">Team Logo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var team in Model.Teams)
+                        {
+                            <tr style="border: 1px solid #ddd;">
+                                <td style="padding: 12px; border: 1px solid #ddd;">
+                                    <input type="checkbox" name="FormModel.SelectedTeamIds" value="@team.Id" id="team_@team.Id"
+                                    @(Model.FormModel.SelectedTeamIds.Contains(team.Id) ? "checked" : "") />
+                                </td>
+                                <td style="padding: 12px; border: 1px solid #ddd; color: black;">
+                                    <label for="team_@team.Id">@team.Name</label>
+                                </td>
+                                <td style="padding: 12px; border: 1px solid #ddd;">
+                                    @if (team.Logo != null)
+                                    {
+                                        <img src="data:image/jpeg;base64,@Convert.ToBase64String(team.Logo)" alt="Team Logo" style="width: 50px; height: 50px; border-radius: 4px;" />
+                                    }
+                                    else
+                                    {
+                                        <span style="color: black;">No Logo</span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <span asp-validation-for="FormModel.SelectedTeamIds" class="text-danger text-sm"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FormModel.MatchNo" class="form-label font-medium mb-1"></label>
+        <input asp-for="FormModel.MatchNo" class="form-control w-full p-2 border rounded" style="color:black"/>
+        <span asp-validation-for="FormModel.MatchNo" class="text-danger text-sm"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FormModel.MatchDate" class="form-label font-medium mb-1"></label>
+        <input asp-for="FormModel.MatchDate" type="date" class="form-control w-full p-2 border rounded" style="color:black" />
+        <span asp-validation-for="FormModel.MatchDate" class="text-danger text-sm"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FormModel.Result" class="form-label font-medium mb-1"></label>
+        <input asp-for="FormModel.Result" class="form-control w-full p-2 border rounded" placeholder="Enter winning Team Name or Pending" style="color:black" />
+        <span asp-validation-for="FormModel.Result" class="text-danger text-sm"></span>
+    </div>
+
+    <div class="form-actions flex space-x-4">
+        <button type="submit" class="btn btn-success px-4 py-2">@((Model.FormModel.Id == 0) ? "Add Match" : "Update Match")</button>
+        <a href="@Url.Action("Content", "Match", new { tournamentId = Model.TournamentId })" class="btn btn-secondary px-4 py-2">Cancel</a>
+    </div>
+</form>

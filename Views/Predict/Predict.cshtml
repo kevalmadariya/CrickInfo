@@ -1,0 +1,211 @@
+﻿@model List<crickinfo_mvc_ef_core.Models.Pointstable>
+@{
+    ViewData["Title"] = "Points Table";
+}
+
+<div class="content-header">
+    <h2>📊 Tournament Points Table</h2>
+    <p>Current standings and team performance analysis</p>
+</div>
+
+@if (Model != null && Model.Any())
+{
+    <div class="team-form-container">
+        <h3>🏆 Points Table Rankings</h3>
+
+        <h2 style="color: white; background-color: #ff4c4c; padding: 15px; border-radius: 8px; text-align: center; font-size: 2rem; font-weight: bold; margin-bottom: 20px;">
+            @ViewBag.Message
+        </h2>
+        <!-- Desktop Table View -->
+        <div class="table-responsive d-none d-md-block">
+            <table class="table" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+                <thead style="background: linear-gradient(135deg, #667eea, #764ba2); color: white;">
+                    <tr>
+                        <th style="padding: 1rem; border: none;">Rank</th>
+                        <th style="padding: 1rem; border: none;">Team Name</th>
+                        <th style="padding: 1rem; border: none; text-align: center;">Points</th>
+                        <th style="padding: 1rem; border: none; text-align: center;">NRR</th>
+                        <th style="padding: 1rem; border: none; text-align: center;">Wins</th>
+                        <th style="padding: 1rem; border: none; text-align: center;">Losses</th>
+                        <th style="padding: 1rem; border: none; text-align: center;">Draws</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        var rank = 1;
+                        var sortedTeams = Model.OrderByDescending(t => t.Points).ThenByDescending(t => t.NRR);
+                    }
+                    @foreach (var item in sortedTeams)
+                    {
+                        <tr style="transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#f8f9fa'" onmouseout="this.style.backgroundColor='white'">
+                            <td style="padding: 1rem; border-bottom: 1px solid #e9ecef; font-weight: bold; color: #667eea;">
+                                @if (rank == 1)
+                                {
+                                    <span>🥇</span>
+                                }
+                                else if (rank == 2)
+                                {
+                                    <span>🥈</span>
+                                }
+                                else if (rank == 3)
+                                {
+                                    <span>🥉</span>
+                                }
+                                else
+                                {
+                                    <span style="color: #6c757d;">#@rank</span>
+                                }
+                            </td>
+                            <td style="color:black; padding: 1rem; border-bottom: 1px solid #e9ecef; font-weight: 500;">
+                                @(item.Team?.Name ?? $"Team #{item.Team?.Id ?? 0}")
+                            </td>
+                            <td style="padding: 1rem; border-bottom: 1px solid #e9ecef; text-align: center; font-weight: bold; color: #28a745;">
+                                @item.Points
+                            </td>
+                            <td style="padding: 1rem; border-bottom: 1px solid #e9ecef; text-align: center; color: @(item.NRR >= 0 ? "#28a745" : "#dc3545");">
+                                @item.NRR.ToString("F2")
+                            </td>
+                            <td style="padding: 1rem; border-bottom: 1px solid #e9ecef; text-align: center; color: #28a745;">
+                                @item.Wins
+                            </td>
+                            <td style="padding: 1rem; border-bottom: 1px solid #e9ecef; text-align: center; color: #dc3545;">
+                                @item.Loss
+                            </td>
+                            <td style="padding: 1rem; border-bottom: 1px solid #e9ecef; text-align: center; color: #6c757d;">
+                                @item.Draw
+                            </td>
+                        </tr>
+                        rank++;
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Mobile Card View -->
+        <div class="d-block d-md-none">
+            @{
+                rank = 1;
+                sortedTeams = Model.OrderByDescending(t => t.Points).ThenByDescending(t => t.NRR);
+            }
+            @foreach (var item in sortedTeams)
+            {
+                <div class="team-card" style="margin-bottom: 1rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div style="font-size: 1.5rem;">
+                                @if (rank == 1)
+                                {
+                                    <span>🥇</span>
+                                }
+                                else if (rank == 2)
+                                {
+                                    <span>🥈</span>
+                                }
+                                else if (rank == 3)
+                                {
+                                    <span>🥉</span>
+                                }
+                                else
+                                {
+                                    <span style="color: #6c757d; font-size: 1.2rem; font-weight: bold;">#@rank</span>
+                                }
+                            </div>
+                            <div>
+                                <strong style="color: black;">@(item.Team?.Name ?? $"Team #{item.Team?.Id ?? 0}")</strong>
+                            </div>
+                        </div>
+                        <div style="text-align: right;">
+                            <div style="font-size: 1.5rem; font-weight: bold; color: #28a745;">@item.Points</div>
+                            <div style="font-size: 0.875rem; color: #6c757d;">Points</div>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                        <div style="text-align: center; padding: 0.75rem; background: #f8f9fa; border-radius: 8px;">
+                            <div style="font-weight: bold; color: @(item.NRR >= 0 ? "#28a745" : "#dc3545");">@item.NRR.ToString("F2")</div>
+                            <div style="font-size: 0.8rem; color: #6c757d;">Net Run Rate</div>
+                        </div>
+                        <div style="text-align: center; padding: 0.75rem; background: #f8f9fa; border-radius: 8px;">
+                            <div style="font-weight: bold; color: #28a745;">@item.Wins</div>
+                            <div style="font-size: 0.8rem; color: #6c757d;">Wins</div>
+                        </div>
+                        <div style="text-align: center; padding: 0.75rem; background: #f8f9fa; border-radius: 8px;">
+                            <div style="font-weight: bold; color: #dc3545;">@item.Loss</div>
+                            <div style="font-size: 0.8rem; color: #6c757d;">Losses</div>
+                        </div>
+                        <div style="text-align: center; padding: 0.75rem; background: #f8f9fa; border-radius: 8px;">
+                            <div style="font-weight: bold; color: #6c757d;">@item.Draw</div>
+                            <div style="font-size: 0.8rem; color: #6c757d;">Draws</div>
+                        </div>
+                    </div>
+                </div>
+                rank++;
+            }
+        </div>
+    </div>
+}
+else
+{
+    <div class="text-gray-600">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
+        <h3>No Points Table Available</h3>
+        <p>There is currently no points table data available for this selection.</p>
+    </div>
+}
+
+<div style="margin-top: 2rem; text-align: center;">
+    <a href="javascript:history.back()" class="btn btn-secondary">
+        ← Back to Teams
+    </a>
+</div>
+
+<style>
+    /* Responsive table utilities */
+    .table-responsive {
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    @@media (max-width: 767px) {
+        .d-block {
+            display: block !important;
+        }
+        .d-md-block {
+            display: none !important;
+        }
+        .d-none {
+            display: none !important;
+        }
+    }
+
+    @@media (min-width: 768px) {
+        .d-md-block {
+            display: block !important;
+        }
+        .d-block.d-md-none {
+            display: none !important;
+        }
+    }
+
+    /* Table hover effects */
+    .table tbody tr:hover {
+        background-color: #f8f9fa !important;
+        transform: translateX(2px);
+    }
+
+    /* Animation for cards */
+    .team-card {
+        animation: slideInUp 0.5s ease forwards;
+    }
+
+    @@keyframes slideInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>

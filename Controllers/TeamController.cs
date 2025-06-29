@@ -1,62 +1,118 @@
-﻿using crickinfo_mvc_ef_core.Models.Interface;
-using crickinfo_mvc_ef_core.Models;
+﻿using crickinfo_mvc_ef_core.Models;
+using crickinfo_mvc_ef_core.Models.DTO;
+using crickinfo_mvc_ef_core.Models.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Hosting;
 
 namespace crickinfo_mvc_ef_core.Controllers
 {
     public class TeamController : Controller
     {
-        private readonly ITeamsRepo _teamRepo;
-        private readonly IUnitOfWork _unitOfWork;
-        public TeamController(ITeamsRepo teamRepo,IUnitOfWork unitOfWork)
+        private readonly ITeamRepo _teamRepo;
+
+        public TeamController(ITeamRepo teamRepo)
         {
             _teamRepo = teamRepo;
-            _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
         }
-
-        public IActionResult Index()
+        public IActionResult Content(int id,int tournamentId, int? teamId = null, bool showForm = false)
         {
-            var teams = _unitOfWork.Team.GetAllTeams();
-            return View(teams);
-        }
-
-        [HttpGet]
-        public ViewResult Create()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult Create(Team model)
-        {
-            int tournament_id = 1;
-            model.TeamTournaments = new List<TeamTournament>();
-            if (ModelState.IsValid)
+            ViewBag.User = HttpContext.Session.GetString("Username");
+            var teams = _teamRepo.GetTeamsByTournametId(id);
+            tournamentId = id;
+            Team formModel;
+            Console.WriteLine("start Content");
+            Console.WriteLine("in contecnt TournaentID : " + id);
+            Console.WriteLine("in contecnt TeamID : " + teamId);
+            if (teamId.HasValue && teamId.Value != 0)
             {
-                Team team = new Team
-                {
-                    Name = model.Name,
-                    Logo = model.Logo,
-                };
-                
-                //_teamRepo.Add(team,tournament_id);
-                _unitOfWork.Team.Add(team, tournament_id);
-                _unitOfWork.Save();
-                return View(model);
+                // Editing
+                formModel = _teamRepo.GetTeamById(teamId.Value) ?? new Team();
+            }
+            else
+            {
+                // Adding
+                formModel = new Team();
             }
 
-            var errorMessages = ModelState.Values
-            .SelectMany(v => v.Errors)
-            .Select(e => e.ErrorMessage)
-            .ToList();
-
-            ViewBag.ErrorMessages = string.Join("<br/>", errorMessages);
-            ViewBag.ModelStateValid = false;
-            ViewBag.Message = "There are errors in the form. Please correct them." + ModelState.ErrorCount.ToString() + " Errror";
-            return View();
+            TeamContentViewModel viewModel = new TeamContentViewModel
+            {
+                Teams = teams,
+                TeamForm = formModel,
+                TournamentId = id,
+                ShowForm = showForm
+            };
+            Console.WriteLine("IMPPPPPPPPPPPPPPPPPPPp" + viewModel.TournamentId);
+            return View(viewModel);
         }
+        [HttpPost]
+        public IActionResult Save(TeamContentViewModel model, IFormFile? LogoFile)
+        {
+            var team = model.TeamForm;  
+            var tournamentId = model.TournamentId;
 
+            foreach (var formdata in ModelState.Values)
+            {
+                foreach (var error in formdata.Errors)
+                {
+                    Console.WriteLine("Error"+error.ErrorMessage);
+                }
+            }
+        
+            Console.WriteLine("start Save");
+            Console.WriteLine(ModelState.IsValid);
+            Console.WriteLine(team.Id);
+            Console.WriteLine(tournamentId);
+            Console.WriteLine(model.TournamentId);
+            
+
+            if (ModelState.IsValid)
+            {
+                if (team.Id == 0)
+                {
+                    // Add
+                    if (LogoFile != null && LogoFile.Length > 0)
+                    {
+                        using (var ms = new MemoryStream())
+                        {
+                            LogoFile.CopyTo(ms);
+                            team.Logo = ms.ToArray();
+                        }
+                    }
+
+                    _teamRepo.Add(team, tournamentId);
+                }
+                else
+                {
+                    // Edit
+                    var existingTeam = _teamRepo.GetTeamById(team.Id);
+                    if (existingTeam == null)
+                    {
+                        return NotFound();
+                    }
+
+                    existingTeam.Name = team.Name;
+
+                    if (LogoFile != null && LogoFile.Length > 0)
+                    {
+                        using (var ms = new MemoryStream())
+                        {
+                            LogoFile.CopyTo(ms);
+                            existingTeam.Logo = ms.ToArray();
+                        }
+                    }
+
+                    _teamRepo.Update(existingTeam);
+                }
+
+                return RedirectToAction("Content", "Team" , new { id = tournamentId });
+            }
+
+            // Reload if model is invalid
+            var teams = _teamRepo.GetTeamsByTournametId(tournamentId);
+            model.Teams = teams;
+            model.ShowForm = true;
+
+            return View("Content", model);
+        }
 
     }
 }

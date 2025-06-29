@@ -2,33 +2,25 @@
 
 namespace crickinfo_mvc_ef_core.Models
 {
-	public class User
-	{
-		public User(){}
-		public User(int Id)
-		{
-			this.Id = Id;
-		}
-		public User(string Name,string Email,string Password,bool IsAdmin)
-		{
-			this.Name = Name;
-			this.Email = Email;
-			this.Password = Password;
-			this.IsAdmin = IsAdmin;
-		}
-		public int Id { get; set; }
+    public class User
+    {
+       public User() {
+            TournamentList = new List<Tournament>();
+        }
 
-		[Required(ErrorMessage = "Name is required")]
-		public string Name { get; set; } = string.Empty; // Non-nullable with default initialization
+        public int Id { get; set; }
+       
+        [Required(ErrorMessage ="Name is required.")]
+       [MaxLength(50)]
+       public string Name { get; set; }
 
-		[Required(ErrorMessage = "Email is required")]
-		[EmailAddress]
-		public string Email { get; set; } = string.Empty; 
+        [Required(ErrorMessage = "Email is required.")]
+        [EmailAddress(ErrorMessage = "Please enter a valid email address.")]
+        public string Email { get; set; }
 
-		[Required(ErrorMessage = "Password is required")]
-		[StringLength(100, MinimumLength = 6)]
-		public string Password { get; set; } = string.Empty; 
+        [Required(ErrorMessage = "Password is required.")]
+        public string Password { get; set; }
+        public ICollection<Tournament> TournamentList { get; set; }
 
-		public bool IsAdmin { get; set; }
-	}
+    }
 }

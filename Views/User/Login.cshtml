@@ -1,0 +1,39 @@
+﻿@model crickinfo_mvc_ef_core.Models.DTO.Login;
+
+@{
+    ViewData["Title"] = "User Login";
+}
+
+<link rel="stylesheet" href="~/css/register.css" />
+
+<div class="form-container">
+    <h1 class="form-title">User Login</h1>
+    <hr />
+    <form asp-action="Login" class="registration-form">
+        <div asp-validation-summary="ModelOnly" class="text-danger summary"></div>
+
+        <div class="form-group">
+            <label asp-for="Email" class="form-label"></label>
+            <input asp-for="Email" class="form-control custom-input" placeholder="Enter Your Email" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Password" class="form-label"></label>
+            <input asp-for="Password" class="form-control custom-input" type="password" placeholder="Enter password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Login" class="btn-submit" />
+        </div>
+    </form>
+
+    <div class="back-link">
+        <a href="/home">← Back</a>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

@@ -1,0 +1,37 @@
+﻿@model crickinfo_mvc_ef_core.Models.DTO.TeamContentViewModel
+
+<h3 class="text-xl font-semibold mb-4">@((Model.TeamForm.Id == 0) ? "Add New Team" : "Edit Team")</h3>
+
+<hr />
+
+<form asp-action="Save" method="post" enctype="multipart/form-data" class="space-y-4">
+    <input type="hidden" asp-for="TeamForm.Id" />
+    <input type="hidden" asp-for="TournamentId" />
+
+    <div class="form-group">
+        <label asp-for="TeamForm.Name" class="form-label font-medium mb-1"></label>
+        <input asp-for="TeamForm.Name" class="form-control w-full p-2 border rounded" style="color:black" placeholder="Enter team name" />
+        <span asp-validation-for="TeamForm.Name" class="text-danger text-sm"></span>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label font-medium mb-1">Team Logo (Optional)</label>
+        <input type="file" name="LogoFile" class="form-control w-full p-2 border rounded" />
+    </div>
+
+    @if (Model.TeamForm.Id != 0 && Model.TeamForm.Logo != null)
+    {
+        <div class="form-group">
+            <label class="form-label font-medium mb-1">Current Logo:</label><br />
+            <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.TeamForm.Logo)" alt="Team Logo" class="rounded shadow mt-2" style="max-width: 150px; max-height: 150px;" />
+        </div>
+    }
+
+    <div class="form-actions flex space-x-4">
+        <button type="submit" class="btn btn-success px-4 py-2" style="border:2px solid gray ; color:blue">
+            @(Model.TeamForm.Id == 0 ? "Create" : "Update")
+        </button>
+
+        <a href="@Url.Action("Content", "Team", new { tournamentId = Model.TournamentId })" class="btn btn-secondary px-4 py-2">Cancel</a>
+    </div>
+</form>

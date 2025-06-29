@@ -1,0 +1,62 @@
+﻿@model crickinfo_mvc_ef_core.Models.DTO.PointsTableContentViewModel
+
+@{
+    ViewData["Title"] = "Points Table";
+}
+
+<div class="content-header flex justify-between items-center mb-4">
+    <h2 class="text-2xl font-bold">Points Table</h2>
+    <a href="@Url.Action("Content", "PointsTable", new { tournamentId = Model.TournamentId, showForm = true })" class="btn btn-primary">@(Model.PointsTableEntries.Any() ? "Edit Points Table" : "Add Points Table")</a>
+</div>
+
+<hr />
+
+@if (Model.ShowForm)
+{
+    <div class="mt-6 p-4 border rounded bg-gray-50">
+        @await Html.PartialAsync("PointsTableForm", Model)
+    </div>
+}
+else
+{
+    @if (Model.PointsTableEntries.Any())
+    {
+        <table class="table-auto w-full border mt-4">
+            <thead>
+
+                <tr class="bg-gray-200">
+                    <th class="p-2 border" style="color:black">Team</th>
+                    <th class="p-2 border" style="color:black">Points</th>
+                    <th class="p-2 border" style="color:black">Wins</th>
+                    <th class="p-2 border" style="color:black">Loss</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                @foreach (var entry in Model.PointsTableEntries)
+                {
+                    <tr>
+                        <td class="p-2 border flex items-center space-x-2">
+                            @if (entry.Team?.Logo != null)
+                            {
+                                <img src="data:image/jpeg;base64,@Convert.ToBase64String(entry.Team.Logo)" style="width: 40px; height: 40px;" class="rounded-full" />
+                            }
+                            <span>@entry.Team?.Name</span>
+                        </td>
+                        <td class="p-2 border">@entry.Points</td>
+                        <td class="p-2 border">@entry.Wins</td>
+                        <td class="p-2 border">@entry.Loss</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No points table available.</p>
+    }
+}
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

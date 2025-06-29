@@ -1,0 +1,45 @@
+﻿@model IEnumerable<crickinfo_mvc_ef_core.Models.Tournament>
+@{
+    ViewData["Title"] = "Tournaments";
+}
+
+<div class="content-header">
+    <h2>🏆 Cricket Tournaments</h2>
+    <p>Select a tournament to explore teams and make predictions</p>
+</div>
+
+@if (Model != null && Model.Any())
+{
+    <div class="team-list">
+        @foreach (var tournament in Model)
+        {
+            <div class="team-card">
+                <div class="team-info">
+                    <div class="tournament-icon" style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold;">
+                        🏆
+                    </div>
+                    <div>
+                        <strong>@tournament.Name</strong>
+                        <div style="color: #6c757d; font-size: 0.9rem; margin-top: 0.25rem;">Cricket Tournament</div>
+                    </div>
+                </div>
+                <div class="team-actions">
+                    <form asp-action="RenderTeams" asp-controller="Predict" method="post" style="margin: 0;">
+                        <input type="hidden" name="tournamentId" value="@tournament.Id" />
+                        <button type="submit" class="btn btn-primary">
+                            <span>🏏</span> View Teams & Predict
+                        </button>
+                    </form>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <div class="text-gray-600">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">🏏</div>
+        <h3>No Tournaments Available</h3>
+        <p>There are currently no tournaments to display. Please check back later.</p>
+    </div>
+}

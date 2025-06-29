@@ -1,11 +1,19 @@
 is_global = true
 build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = crickinfo_mvc_ef_core
 build_property.RootNamespace = crickinfo_mvc_ef_core
@@ -18,36 +26,108 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\wad_project\crickinfo_mvc_ef_core
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/wad_project/crickinfo_mvc_ef_core/CrickInfo/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Q3JpY2tJbmZvXFZpZXdzXEhvbWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wad_project/crickinfo_mvc_ef_core/CrickInfo/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Q3JpY2tJbmZvXFZpZXdzXEhvbWVcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wad_project/crickinfo_mvc_ef_core/CrickInfo/Views/Matches/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Q3JpY2tJbmZvXFZpZXdzXE1hdGNoZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wad_project/crickinfo_mvc_ef_core/CrickInfo/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Q3JpY2tJbmZvXFZpZXdzXFNoYXJlZFxFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wad_project/crickinfo_mvc_ef_core/CrickInfo/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Q3JpY2tJbmZvXFZpZXdzXFNoYXJlZFxfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wad_project/crickinfo_mvc_ef_core/CrickInfo/Views/Team/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Q3JpY2tJbmZvXFZpZXdzXFRlYW1cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wad_project/crickinfo_mvc_ef_core/CrickInfo/Views/Tournament/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Q3JpY2tJbmZvXFZpZXdzXFRvdXJuYW1lbnRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wad_project/crickinfo_mvc_ef_core/CrickInfo/Views/Tournament/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Q3JpY2tJbmZvXFZpZXdzXFRvdXJuYW1lbnRcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wad_project/crickinfo_mvc_ef_core/CrickInfo/Views/User/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Q3JpY2tJbmZvXFZpZXdzXFVzZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wad_project/crickinfo_mvc_ef_core/CrickInfo/Views/User/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Q3JpY2tJbmZvXFZpZXdzXFVzZXJcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wad_project/crickinfo_mvc_ef_core/CrickInfo/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Q3JpY2tJbmZvXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wad_project/crickinfo_mvc_ef_core/CrickInfo/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Q3JpY2tJbmZvXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/wad_project/crickinfo_mvc_ef_core/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/wad_project/crickinfo_mvc_ef_core/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[D:/wad_project/crickinfo_mvc_ef_core/Views/Match/Content.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0Y2hcQ29udGVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/wad_project/crickinfo_mvc_ef_core/Views/Matches/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0Y2hlc1xDcmVhdGUuY3NodG1s
+[D:/wad_project/crickinfo_mvc_ef_core/Views/Match/MatchForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0Y2hcTWF0Y2hGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/wad_project/crickinfo_mvc_ef_core/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+[D:/wad_project/crickinfo_mvc_ef_core/Views/Pointstable/Content.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9pbnRzdGFibGVcQ29udGVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wad_project/crickinfo_mvc_ef_core/Views/Pointstable/PointsTableForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9pbnRzdGFibGVcUG9pbnRzVGFibGVGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wad_project/crickinfo_mvc_ef_core/Views/Predict/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZGljdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wad_project/crickinfo_mvc_ef_core/Views/Predict/Predict.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZGljdFxQcmVkaWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wad_project/crickinfo_mvc_ef_core/Views/Predict/RenderTeams.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZGljdFxSZW5kZXJUZWFtcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wad_project/crickinfo_mvc_ef_core/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/wad_project/crickinfo_mvc_ef_core/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/wad_project/crickinfo_mvc_ef_core/Views/Team/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxDcmVhdGUuY3NodG1s
+[D:/wad_project/crickinfo_mvc_ef_core/Views/Team/Content.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxDb250ZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/wad_project/crickinfo_mvc_ef_core/Views/Tournament/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG91cm5hbWVudFxDcmVhdGUuY3NodG1s
+[D:/wad_project/crickinfo_mvc_ef_core/Views/Team/TeamForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxUZWFtRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/wad_project/crickinfo_mvc_ef_core/Views/Tournament/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG91cm5hbWVudFxEZXRhaWxzLmNzaHRtbA==
+[D:/wad_project/crickinfo_mvc_ef_core/Views/Tournament/Content.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG91cm5hbWVudFxDb250ZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wad_project/crickinfo_mvc_ef_core/Views/Tournament/TournamentForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG91cm5hbWVudFxUb3VybmFtZW50Rm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/wad_project/crickinfo_mvc_ef_core/Views/User/Create.cshtml]
@@ -58,6 +138,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/wad_project/crickinfo_mvc_ef_core/Views/User/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/wad_project/crickinfo_mvc_ef_core/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -66,6 +150,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/wad_project/crickinfo_mvc_ef_core/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-va7o0795ng
+[D:/wad_project/crickinfo_mvc_ef_core/CrickInfo/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Q3JpY2tJbmZvXFZpZXdzXFNoYXJlZFxfTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-hvcbgatv66

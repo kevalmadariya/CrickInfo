@@ -1,0 +1,73 @@
+﻿@model crickinfo_mvc_ef_core.Models.DTO.TeamContentViewModel
+
+@{
+    ViewData["Title"] = "Teams";
+}
+
+<link rel="stylesheet" href="~/css/teams.css" />
+
+<div class="content-header flex justify-between items-center mb-4">
+    <h2 class="text-2xl font-bold">Teams</h2>
+    @if(ViewBag.User != null)
+    {
+        
+        <a href="@Url.Action("Content", "Team", new { tournamentId = Model.TournamentId, showForm = true })" class="btn btn-primary">+ Add Team</a>
+    }
+</div>
+
+<hr />
+
+<div class="team-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    @if (Model.Teams != null && Model.Teams.Any())
+    {
+        foreach (var team in Model.Teams)
+        {
+            <div class="team-card p-4 border rounded-2xl shadow flex justify-between items-center bg-white hover:shadow-lg transition-all">
+                <div class="team-info flex items-center space-x-4">
+                    <strong class="text-lg">@team.Name</strong>
+                    @if (team.Logo != null)
+                    {
+                        <img src="data:image/jpeg;base64,@Convert.ToBase64String(team.Logo)" alt="Team Logo" class="rounded-full" style="width: 50px; height: 50px;" />
+                    }
+                </div>
+
+                <div class="team-actions flex space-x-2">
+                    <a href="@Url.Action("Content", "Team", new { tournamentId = Model.TournamentId, teamId = team.Id, showForm = true })" class="btn btn-secondary">Edit</a>
+
+                    <form asp-action="Delete" method="post" class="inline" onsubmit="return confirm('Are you sure you want to delete @team.Name?');">
+                        <input type="hidden" name="id" value="@team.Id" />
+                        <input type="hidden" name="tournamentId" value="@Model.TournamentId" />
+                        <button type="submit" style="color:blue" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p class="text-gray-600">No teams available.</p>
+    }
+</div>
+
+<!-- Team Form -->
+@if (Model.ShowForm)
+{
+    <div class="team-form-container mt-6 p-4 border rounded-2xl shadow bg-gray-50">
+        @await Html.PartialAsync("TeamForm", Model)
+    </div>
+}
+
+@if(ViewBag.User != null)
+    {
+<a href="@Url.Action("Content", "Match", new { id = Model.TournamentId })"
+   style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+          cursor: pointer;" class="btn btn-primary">
+    ➕ Add Schedule
+</a>
+    }
+    
+
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

@@ -1,0 +1,65 @@
+﻿@model crickinfo_mvc_ef_core.Models.Tournament
+
+@{
+    ViewData["Title"] = Model.Id == 0 ? "Add Tournament" : "Edit Tournament";
+}
+
+<link rel="stylesheet" href="~/css/register.css" />
+
+<div class="form-container">
+    <h1 class="form-title">@ViewData["Title"]</h1>
+    <hr />
+    <!-- Use a unified Save action -->
+    <form asp-action="Save" class="registration-form">
+        <div asp-validation-summary="ModelOnly" class="text-danger summary"></div>
+
+        @* Hidden ID field to support edit *@
+        <input type="hidden" asp-for="Id" />
+
+        <!-- Name Field -->
+        <div class="form-group">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control custom-input" placeholder="Enter Tournament Name" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <!-- Description Field -->
+        <div class="form-group">
+            <label asp-for="Description" class="form-label"></label>
+            <textarea asp-for="Description" class="form-control custom-input" placeholder="Enter Tournament Description"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <!-- Date of Tournament Field -->
+        <div class="form-group">
+            <label asp-for="DateOfTournament" class="form-label"></label>
+            <input asp-for="DateOfTournament" class="form-control custom-input" type="date" />
+            <span asp-validation-for="DateOfTournament" class="text-danger"></span>
+        </div>
+
+        <!-- Status Field -->
+        <div class="form-group">
+            <label asp-for="Status" class="form-label"></label>
+            <select asp-for="Status" class="form-control custom-input">
+                <option value="">-- Select Status --</option>
+                <option value="Future">Future</option>
+                <option value="Ongoing">Ongoing</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <span asp-validation-for="Status" class="text-danger"></span>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group">
+            <input type="submit" value="@(Model.Id == 0 ? "Create Tournament" : "Update Tournament")" class="btn-submit" />
+        </div>
+    </form>
+
+    <div class="back-link">
+        <a href="@Url.Action("Content","Tournament")">← Back to List</a>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

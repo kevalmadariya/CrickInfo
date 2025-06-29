@@ -1,0 +1,63 @@
+﻿@model crickinfo_mvc_ef_core.Models.DTO.PointsTableContentViewModel
+
+<form asp-action="Save" method="post" class="space-y-4">
+    <input type="hidden" asp-for="TournamentId" />
+
+    <table class="table-auto w-full border mt-4">
+        <thead>
+            <tr class="bg-blue-200">
+                <th class="p-2 border" style="color:black">Team</th>
+                <th class="p-2 border" style="color:black">Name</th>
+                <th class="p-2 border" style="color:black">Points</th>
+                <th class="p-2 border" style="color:black">Wins</th>
+                <th class="p-2 border" style="color:black">Loss</th>
+                <th class="p-2 border" style="color:black">Draw</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                var index = 0;
+            }
+
+            @foreach (var team in Model.Teams)
+            {
+                var entry = Model.PointsTableEntries.FirstOrDefault(e => e.TeamId == team.Id) ?? new crickinfo_mvc_ef_core.Models.Pointstable { TeamId = team.Id, TournamentId = Model.TournamentId };
+
+                <tr>
+                    <td class="p-2 border flex items-center space-x-2">
+                        <input type="hidden" name="PointsTableEntries[@index].Id" value="@entry.Id" />
+                        <input type="hidden" name="PointsTableEntries[@index].TeamId" value="@team.Id" />
+                        <input type="hidden" name="PointsTableEntries[@index].TournamentId" value="@Model.TournamentId" />
+                        @if (team.Logo != null)
+                        {
+                            <img src="data:image/jpeg;base64,@Convert.ToBase64String(team.Logo)" style="width: 40px; height: 40px;" class="rounded-full" />
+                        }
+                    </td>
+                    <td class="p-2 border" style="color:black">
+                        <span>@team.Name</span>
+                    </td>
+                    <td class="p-2 border">
+                        <input type="number" name="PointsTableEntries[@index].Points" value="@entry.Points" class="form-control w-full p-2 border rounded" style="color:black" />
+                    </td>
+                    <td class="p-2 border">
+                        <input type="number" name="PointsTableEntries[@index].Wins" value="@entry.Wins" class="form-control w-full p-2 border rounded" style="color:black" />
+                    </td>
+                    <td class="p-2 border">
+                        <input type="number" name="PointsTableEntries[@index].Loss" value="@entry.Loss" class="form-control w-full p-2 border rounded" style="color:black" />
+                    </td>
+                    <td class="p-2 border">
+                        <input type="number" name="PointsTableEntries[@index].Draw" value="@entry.Draw" class="form-control w-full p-2 border rounded" style="color:black" />
+                    </td>
+                </tr>
+
+                index++;
+            }
+
+        </tbody>
+    </table>
+
+    <div class="form-actions flex space-x-4 mt-4">
+        <button type="submit" class="btn btn-success px-4 py-2">Save Points Table</button>
+        <a href="@Url.Action("Content", "PointsTable", new { tournamentId = Model.TournamentId })" class="btn btn-secondary px-4 py-2">Cancel</a>
+    </div>
+</form>
